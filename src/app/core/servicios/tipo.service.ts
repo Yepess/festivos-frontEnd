@@ -1,34 +1,34 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 import { Tipo } from '../../shared/entidades/tipo';
-import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TipoService {
-  private apiUrl = `${environment.urlService}tipo`;
+  private url = `${environment.urlService}tipo`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   obtenerTodos(): Observable<Tipo[]> {
-    return this.http.get<Tipo[]>(this.apiUrl);
+    return this.http.get<Tipo[]>(this.url);
   }
 
   obtener(id: number): Observable<Tipo> {
-    return this.http.get<Tipo>(`${this.apiUrl}/${id}`);
+    return this.http.get<Tipo>(`${this.url}/${id}`);
   }
 
   agregar(tipo: Tipo): Observable<Tipo> {
-    return this.http.post<Tipo>(this.apiUrl, tipo);
+    return this.http.post<Tipo>(this.url, tipo);
   }
 
   modificar(tipo: Tipo): Observable<Tipo> {
-    return this.http.put<Tipo>(`${this.apiUrl}/${tipo.id}`, tipo);
+    return this.http.put<Tipo>(`${this.url}/${tipo.id}`, tipo);
   }
 
-  eliminar(id: number): Observable<boolean> {
-    return this.http.delete<boolean>(`${this.apiUrl}/${id}`);
+  eliminar(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
   }
 }
