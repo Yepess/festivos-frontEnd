@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Crear Tipo</h2>
+
+  <form>
+    <label for="nombre">Nombre del Tipo:</label>
+    <input id="nombre" name="nombre" [(ngModel)]="nuevoTipo.nombre" placeholder="Escribe el tipo..." />
+    <button type="button" (click)="crearTipo()">Guardar</button>
+  </form>
+</div>

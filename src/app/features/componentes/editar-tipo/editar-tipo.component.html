@@ -1,0 +1,10 @@
+<div class="container" *ngIf="tipo">
+  <h2>Editar Tipo</h2>
+
+  <form>
+    <label for="nombre">Nombre del Tipo:</label>
+    <input id="nombre" name="nombre" [(ngModel)]="tipo.nombre" placeholder="Escribe el nombre..." />
+
+    <button type="button" (click)="actualizarTipo()">Guardar cambios</button>
+  </form>
+</div>

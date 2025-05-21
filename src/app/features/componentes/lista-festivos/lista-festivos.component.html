@@ -1,1 +1,23 @@
-<p>lista-festivos works!</p>
+<div class="container">
+  <h2>Lista de Festivos</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let festivo of festivos">
+        <td>{{ festivo.nombre }}</td>
+        <td>{{ festivo.fecha ? (festivo.fecha | date:'dd/MM/yyyy') : 'Sin fecha' }}</td>
+        <td>
+          <button (click)="eliminarFestivo(festivo.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

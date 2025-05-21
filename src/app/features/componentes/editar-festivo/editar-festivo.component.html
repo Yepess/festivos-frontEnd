@@ -1,1 +1,13 @@
-<p>editar-festivo works!</p>
+<div class="container" *ngIf="festivo">
+  <h2>Editar Festivo</h2>
+
+  <form>
+    <label for="nombre">Nombre del Festivo:</label>
+    <input id="nombre" name="nombre" [(ngModel)]="festivo.nombre" placeholder="Escribe el nombre..." />
+
+    <label for="fecha">Fecha:</label>
+    <input id="fecha" type="date" [(ngModel)]="festivo.fecha" />
+
+    <button type="button" (click)="actualizarFestivo()">Guardar cambios</button>
+  </form>
+</div>

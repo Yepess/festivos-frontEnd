@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeleccionEditarComponent } from './seleccion-editar.component';
+import { FestivosComponent } from './festivos.component';
 
-describe('SeleccionEditarComponent', () => {
-  let component: SeleccionEditarComponent;
-  let fixture: ComponentFixture<SeleccionEditarComponent>;
+describe('FestivosComponent', () => {
+  let component: FestivosComponent;
+  let fixture: ComponentFixture<FestivosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SeleccionEditarComponent]
+      imports: [FestivosComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SeleccionEditarComponent);
+    fixture = TestBed.createComponent(FestivosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

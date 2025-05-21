@@ -1,1 +1,13 @@
-<p>crear-festivo works!</p>
+<div class="container">
+  <h2>Crear Festivo</h2>
+
+  <form>
+    <label for="nombre">Nombre del Festivo:</label>
+    <input id="nombre" name="nombre" [(ngModel)]="nuevoFestivo.nombre" placeholder="Escribe el nombre..." />
+
+    <label for="fecha">Fecha:</label>
+    <input id="fecha" type="date" [(ngModel)]="nuevoFestivo.fecha" />
+
+    <button type="button" (click)="crearFestivo()">Guardar</button>
+  </form>
+</div>

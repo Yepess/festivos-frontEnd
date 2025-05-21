@@ -8,4 +8,5 @@ export interface Festivo {
   diasPascua: number;
   idTipo: number;
   tipo?: Tipo;
+  fecha: Date;
 }
