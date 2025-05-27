@@ -1,1 +1,16 @@
-<p>tipo works!</p>
+<div class="container">
+  <h2>Lista de Tipos</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tipo of tipos">
+        <td>{{ tipo.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

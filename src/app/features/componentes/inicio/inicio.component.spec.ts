@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InicioComponent } from './inicio.component';
 
 describe('InicioComponent', () => {
@@ -8,16 +7,19 @@ describe('InicioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InicioComponent]
-    })
-    .compileComponents();
+      declarations: [InicioComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(InicioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('debe crear el componente correctamente', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('debe tener el título definido', () => {
+    expect(component.titulo).toBe('Bienvenido a la Aplicación de Festivos');
   });
 });
