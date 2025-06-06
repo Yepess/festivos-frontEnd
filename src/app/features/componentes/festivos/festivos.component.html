@@ -1,17 +1,24 @@
 <div class="container">
   <h2>Lista de Festivos</h2>
 
+  <button (click)="irCrearFestivo()">Crear Festivo</button>
+
   <table>
     <thead>
       <tr>
         <th>Nombre</th>
         <th>Fecha</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let festivo of festivos">
         <td>{{ festivo.nombre }}</td>
         <td>{{ formatearFecha(festivo.fecha) }}</td>
+        <td>
+          <button (click)="irEditarFestivo(festivo.id)">Editar</button>
+          <button (click)="eliminarFestivo(festivo.id)">Eliminar</button>
+        </td>
       </tr>
     </tbody>
   </table>
